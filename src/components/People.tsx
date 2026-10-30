@@ -4,7 +4,7 @@ import { Gallery } from './Media';
 import { survivor } from '../data/survivor';
 import { people } from '../data/people';
 import { events } from '../data/events';
-import { SectionHead, ImageSlot, Modal, SourceChips, StatusBadge } from './ui';
+import { SectionHead, ImageSlot, Modal, StatusBadge } from './ui';
 
 const colors = ['#2f4fd8', '#b3202c', '#6b3fc2', '#c4710f', '#16825b', '#c23b86'];
 const NA = 'Não consta nas fontes consultadas.';
@@ -44,7 +44,7 @@ export function VictimsSection({ onOpen, onSource }: { onOpen: (id: string) => v
         <Gallery items={[survivor.photo]} />
         <p className="lead">{survivor.intro}</p>
         {survivor.blocks.map(b => (
-          <div key={b.h} className="bio"><b className="mono">{b.h.toUpperCase()}</b>{b.p.map((t, k) => <p key={k}>{t.text} <SourceChips ids={t.sources} onOpen={onSource} /></p>)}</div>
+          <div key={b.h} className="bio"><b className="mono">{b.h.toUpperCase()}</b>{b.p.map((t, k) => <p key={k}>{t.text}</p>)}</div>
         ))}
         <p className="limit"><b className="mono">NOTA</b> {survivor.note}</p>
       </article>
@@ -66,7 +66,7 @@ export function PersonModal({ id, onClose, onSource, onEvent }: { id: string; on
           <h3>{p.name}</h3><p>{p.summary}</p>
           {p.profile && <VictimProfile p={p} onSource={onSource} />}
           <b className="mono">DADOS E CONFIABILIDADE</b>
-          <table className="facts"><tbody>{p.facts.map(f => <tr key={f.label}><th className="mono">{f.label}</th><td>{f.value}<br /><StatusBadge status={f.status} /> <SourceChips ids={f.sourceIds} onOpen={onSource} /></td></tr>)}</tbody></table>
+          <table className="facts"><tbody>{p.facts.map(f => <tr key={f.label}><th className="mono">{f.label}</th><td>{f.value}<br /><StatusBadge status={f.status} /></td></tr>)}</tbody></table>
           {p.limitation && <p className="limit"><b className="mono">LIMITAÇÃO</b> {p.limitation}</p>}
           {p.eventIds.length > 0 && <b className="mono">NA LINHA DO TEMPO</b>}
           <ul className="rel">{p.eventIds.map(e => { const ev = events.find(x => x.id === e)!; return <li key={e}><button onClick={() => onEvent(e)}>{ev.dateLabel} — {ev.title}</button></li>; })}</ul>
@@ -89,7 +89,7 @@ function VictimProfile({ p, onSource }: { p: typeof people[number]; onSource: (s
           <tr><th className="mono">Idade que teria hoje</th><td>{now}</td></tr>
           <tr><th className="mono">Ocupação</th><td>{f.occupation}</td></tr>
         </tbody></table></section>
-      {p.bio && <section><h4 className="mono">2 · BIOGRAFIA</h4>{p.bio.flatMap(s => s.p).map((t, k) => <p key={k}>{t}</p>)}{p.bioSources && <p className="mono">FONTE <SourceChips ids={p.bioSources} onOpen={onSource} /></p>}</section>}
+      {p.bio && <section><h4 className="mono">2 · BIOGRAFIA</h4>{p.bio.flatMap(s => s.p).map((t, k) => <p key={k}>{t}</p>)}</section>}
       <section><h4 className="mono">3 · COMO FOI ABORDADA</h4>{list(f.approach)}</section>
       <section><h4 className="mono">4 · COMO MORREU</h4>{list(f.death)}</section>
       <section><h4 className="mono">5 · DEPOIS DA MORTE</h4>{list(f.post)}</section>

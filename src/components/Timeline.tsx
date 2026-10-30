@@ -3,7 +3,7 @@ import { events } from '../data/events';
 import { people } from '../data/people';
 import { markers } from '../data/markers';
 import type { EventCategory } from '../data/types';
-import { SectionHead, Modal, SourceChips, StatusBadge } from './ui';
+import { SectionHead, Modal, StatusBadge } from './ui';
 import { norm } from '../lib';
 
 const cats: ('Todas' | EventCategory)[] = ['Todas', 'Acontecimento', 'Etapa investigativa', 'Informação à imprensa', 'Prisão', 'Decisão judicial'];
@@ -49,7 +49,6 @@ export function EventModal({ id, onClose, onSource, onPerson, onMarker }: { id: 
       <p><StatusBadge status={e.status} /></p>
       {e.note && <p className="limit"><b className="mono">DIVERGÊNCIA / NOTA</b> {e.note}</p>}
       <p className="dim mono">Data do acontecimento ≠ data de publicação da fonte. Fontes abaixo são secundárias.</p>
-      <p className="mono">FONTES <SourceChips ids={e.sourceIds} onOpen={onSource} /></p>
       <div className="row">
         {mk && <button className="btn ghost" onClick={() => onMarker(mk.id)}>Ver no mapa: {mk.name}</button>}
         {e.personIds?.map(pid => <button key={pid} className="btn ghost" onClick={() => onPerson(pid)}>Perfil: {people.find(p => p.id === pid)?.name}</button>)}

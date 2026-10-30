@@ -1,4 +1,4 @@
-// Cartas recebidas na prisão. Trechos publicados em enciclopédia colaborativa (S08, citando reportagem); texto sob licença CC BY-SA.
+// Cartas recebidas na prisão (trechos publicados em reportagem).
 export const lettersIntro = 'O motoboy recebeu muitas cartas de admiradoras na prisão. Os trechos abaixo são registro documental de um fenômeno estudado, e não representam apoio ao autor dos crimes.';
 export const letters: string[] = [
   'Eu não sei o que fazer para te distrair. Mas eu tenho uma ideia: primeiro quero dizer que te desejo todas as noites. É muito bom. Te acho gostoso, meu fogoso. Você está juntinho comigo, dentro do meu coração. Depois que chego em casa, queria você de corpo e alma, te amando. Te quero de qualquer jeito. Eu te amo do fundo do meu coração. Não perca a esperança, acredite em Deus, porque algum dia a gente vai se encontrar. Sei de seu comportamento doentio, por isso quero que fique calmo…',

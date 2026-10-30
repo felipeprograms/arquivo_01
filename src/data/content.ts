@@ -30,13 +30,13 @@ export const content: Record<string, { lead: string; paras: Para[] }> = {
     paras: [
       { text: 'Após a localização dos corpos, a polícia reuniu relatos de sobreviventes de ataques. Segundo a imprensa, a imagem do suspeito foi divulgada e ele foi reconhecido por vítimas.', sources: ['S11', 'S12'] },
       { text: 'Há divergência sobre o tempo entre o retrato falado e a prisão: uma fonte fala em 23 dias, outra em cerca de 20 dias de fuga.', sources: ['S12', 'S02'] },
-      { text: 'Após a prisão, segundo a Gazeta SP, o depoimento durou 72 horas; reportagens relatam confissão parcial e indicação do local de restos mortais de Selma.', sources: ['S01', 'S08', 'S12'] }
+      { text: 'Após a prisão, segundo a Gazeta SP, o depoimento durou 72 horas; reportagens relatam confissão parcial e indicação do local de restos mortais de Selma.', sources: ['S01', 'S12'] }
     ]
   },
   'prisao': {
     lead: 'A prisão ocorreu no oeste do Rio Grande do Sul, a mais de 700 km de Porto Alegre, segundo a imprensa.',
     paras: [
-      { text: 'Data mais citada: 4 de agosto de 1998, em Itaqui (RS), município na fronteira com a Argentina.', sources: ['S02', 'S09', 'S11'] },
+      { text: 'Data mais citada: 4 de agosto de 1998, em Itaqui (RS), município na fronteira com a Argentina.', sources: ['S02', 'S11'] },
       { text: 'Segundo reportagens, o reconhecimento partiu de um pescador. Detalhes operacionais não foram confirmados em fonte oficial. A distância citada vem do TecMundo.', sources: ['S01', 'S12'] }
     ]
   },

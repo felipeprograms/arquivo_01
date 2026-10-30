@@ -1,6 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import { images } from '../data/images';
-import { srcById, statusLabel } from '../lib';
+import { statusLabel } from '../lib';
 import { MosaicPortrait, NewsCover } from './Decor';
 import type { Status } from '../data/types';
 
@@ -33,14 +33,6 @@ export function ImageSlot({ id, label, className = '', ratio = '4/5', kind = 'sc
       <span className="mono">IMAGEM PENDENTE</span>
       <small>{label}</small>
     </div>
-  );
-}
-
-export function SourceChips({ ids, onOpen }: { ids: string[]; onOpen: (id: string) => void }) {
-  return (
-    <span className="chips">
-      {ids.map(id => <button key={id} className="chip mono" onClick={() => onOpen(id)} title={srcById(id)?.title}>{id}</button>)}
-    </span>
   );
 }
 

@@ -4,7 +4,7 @@ import { SectionHead, Modal, ImageSlot } from './ui';
 import { events } from '../data/events';
 import { norm } from '../lib';
 
-const rel = { oficial: 'Fonte oficial (texto legal)', imprensa: 'Imprensa', colaborativa: 'Enciclopédia colaborativa', blog: 'Blog / podcast (baixa confiabilidade)' };
+const rel = { oficial: 'Fonte oficial (texto legal)', imprensa: 'Imprensa', blog: 'Blog / podcast (baixa confiabilidade)' };
 
 export function ArchiveSection({ onOpen }: { onOpen: (id: string) => void }) {
   const [r, setR] = useState('todas'); const [q, setQ] = useState('');
@@ -15,7 +15,7 @@ export function ArchiveSection({ onOpen }: { onOpen: (id: string) => void }) {
         Nenhum documento judicial ou policial original foi localizado online. O arquivo abaixo reúne as reportagens e publicações efetivamente consultadas; cada item é um material secundário.
       </SectionHead>
       <div className="filters">
-        <div className="chips" role="group" aria-label="Tipo de fonte">{[['todas', 'Todas'], ['oficial', 'Oficiais'], ['imprensa', 'Imprensa'], ['colaborativa', 'Colaborativas'], ['blog', 'Blogs e podcasts']].map(([v, l]) => <button key={v} className={`pill ${r === v ? 'on' : ''}`} onClick={() => setR(v)}>{l}</button>)}</div>
+        <div className="chips" role="group" aria-label="Tipo de fonte">{[['todas', 'Todas'], ['oficial', 'Oficiais'], ['imprensa', 'Imprensa'], ['blog', 'Blogs e podcasts']].map(([v, l]) => <button key={v} className={`pill ${r === v ? 'on' : ''}`} onClick={() => setR(v)}>{l}</button>)}</div>
         <input className="field" value={q} onChange={e => setQ(e.target.value)} placeholder="Buscar documentos…" aria-label="Buscar documentos" />
       </div>
       <div className="grid docs">

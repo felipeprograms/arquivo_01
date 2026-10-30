@@ -1,0 +1,4 @@
+originals/*
+!originals/.gitkeep
+node_modules
+dist

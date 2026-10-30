@@ -1,4 +1,4 @@
-export type Reliability = 'oficial' | 'imprensa' | 'colaborativa' | 'blog';
+export type Reliability = 'oficial' | 'imprensa' | 'blog';
 export type Status = 'confirmado' | 'fonte-unica' | 'divergente';
 
 export interface Source {
@@ -37,6 +37,7 @@ export type MarkerKind = 'evento' | 'investigacao' | 'localizacao' | 'marco' | '
 
 export interface MapMarker {
   id: string;
+  personIds?: string[]; // pessoas exibidas ao selecionar o local
   name: string;
   kind: MarkerKind;
   lat: number;

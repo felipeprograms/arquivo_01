@@ -1,5 +1,5 @@
 import { rights, rightsLabel } from '../data/rights';
-import { SectionHead, SourceChips } from './ui';
+import { SectionHead } from './ui';
 
 const [vit, con] = rights;
 const lists = [
@@ -12,7 +12,7 @@ export default function Rights({ onSource }: { onSource: (id: string) => void })
   return (
     <section id="direitos" className="section">
       <SectionHead num="13" kicker="Constituição Federal de 1988" title={<>Direitos <em>fundamentais</em></>}>
-        Quais direitos foram violados e quais a Constituição garante a todos os envolvidos: vítimas e condenado. Leitura didática, não parecer jurídico. <SourceChips ids={['S16']} onOpen={onSource} />
+        Quais direitos foram violados e quais a Constituição garante a todos os envolvidos: vítimas e condenado. Leitura didática, não parecer jurídico.
       </SectionHead>
       <div className="rights-legend" aria-label="Legenda">{(Object.keys(rightsLabel) as (keyof typeof rightsLabel)[]).map(k => <span key={k} className={`rbadge r-${k}`}>{rightsLabel[k]}</span>)}</div>
       <div className="rights-grid">

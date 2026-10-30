@@ -12,7 +12,6 @@ import { ArchiveSection, SourceModal } from './components/Archive';
 import Legal from './components/Legal';
 import Rights from './components/Rights';
 import Method from './components/Method';
-import { Contact } from './components/Footer';
 import Footer from './components/Footer';
 import Search, { type Hit } from './components/Search';
 import { go } from './lib';
@@ -62,7 +61,7 @@ export default function App() {
         <Chapter id="contexto" onSource={onSource} />
         <Author onSource={onSource} onOpen={id => show('pessoa', id)} />
         <TimelineSection onOpen={id => show('evento', id)} />
-        <MapSection selected={marker} onSelect={selectMarker} onSource={onSource} onEvent={id => show('evento', id)} />
+        <MapSection selected={marker} onSelect={selectMarker} onEvent={id => show('evento', id)} onPerson={id => show('pessoa', id)} />
         <VictimsSection onOpen={id => show('pessoa', id)} onSource={onSource} />
         <Chapter id="abordagens" onSource={onSource} />
         <Chapter id="investigacao" onSource={onSource} />
@@ -72,7 +71,6 @@ export default function App() {
         <Chapter id="repercussao" onSource={onSource} />
         <Rights onSource={onSource} />
         <Method onSource={onSource} />
-        <Contact />
       </main>
       <Footer />
       <ToTop />
