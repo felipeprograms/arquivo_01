@@ -1,0 +1,10 @@
+// Cartas recebidas na prisão (trechos publicados em reportagem).
+export const lettersIntro = 'O Condenado recebeu muitas cartas de admiradoras na prisão. Os trechos abaixo são registro documental de um fenômeno estudado, e não representam apoio ao autor dos crimes.';
+export const letters: string[] = [
+  'Eu não sei o que fazer para te distrair. Mas eu tenho uma ideia: primeiro quero dizer que te desejo todas as noites. É muito bom. Te acho gostoso, meu fogoso. Você está juntinho comigo, dentro do meu coração. Depois que chego em casa, queria você de corpo e alma, te amando. Te quero de qualquer jeito. Eu te amo do fundo do meu coração. Não perca a esperança, acredite em Deus, porque algum dia a gente vai se encontrar. Sei de seu comportamento doentio, por isso quero que fique calmo…',
+  'Por enquanto, nossos beijos são assim. Mas quero te beijar de verdade. Acho que tens saudades. Eu te amo, te amo, te amo etc., te desejo, te quero de corpo e alma. E me perdoe por tudo que estou sofrendo. Sabe Francis, eu não me conformo, e choro. E eu preciso ser forte (…)',
+  'Quero te dizer que estou morrendo de saudade, querendo você… Aih meu Deus como te desejo todas as noites. Eu durmo sozinha e querendo você aqui. Mas sei que é impossível. O certo é eu ir te ver. E como posso sentir. Que é meu?',
+  'Francisco, não deixe a tristeza tomar conta de você e acabar com o brilho do seu olhar. Acredite em Deus, você não está e nunca ficará sozinho. Jesus te ama, sua mãe e seu pai também e, principalmente, eu…',
+  'Depois que tudo aconteceu, tentei dar um fim a minha vida, mais uma coisa super interessante teve que acontecer, eu pensei muito e tive esperanças, acredite o mundo dá voltas, quando a gente menos espera algo de bom sempre acontece.'
+];
+export const lettersNote = 'O jornalista e roteirista Gilmar Rodrigues publicou em 2009 o livro “Loucas de Amor: mulheres que amam serial killers e criminosos sexuais” (Ideias a Granel), em que tenta entender por que o Maníaco é desejado por tantas mulheres. Segundo o autor, ele ficou impressionado com as cerca de mil cartas de amor que o criminoso recebeu um mês após ser preso, ainda em 1998.';
